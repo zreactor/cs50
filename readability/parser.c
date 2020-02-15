@@ -44,7 +44,6 @@ int readabilityParser(char inputText[]) {
                 }
             } else {
                 if (isLetter(inputText[i])) {
-                    printf("True... %c %i\n", inputText[i], inputText[i]);
                     letters ++;
                 } 
             }
@@ -71,7 +70,8 @@ bool isLetter(char c) {
 }
 
 float getScore(int words, int letters, int sentences) {
-    // Here, L is the average number of letters per 100 words in the text, and S is the average number of sentences per 100 words in the text.
+    // L: the average number of letters per 100 words in the text
+    // S: the average number of sentences per 100 words in the text
 
     float L = ((float) letters/words) * 100.0;
     float S = ((float) sentences)/words * 100.0;
